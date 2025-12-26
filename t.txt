@@ -1,0 +1,3 @@
+1 | task: sample1 | condition: completed
+2 | task: sample2 | condition: not completed
+3 | task: sample3 | condition: not completed
