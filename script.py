@@ -58,8 +58,6 @@ def edit():
 
 def complete_task():
     task_name = input("Enter the task name to mark as completed: ").strip()
-    if task_name not in tasks_stat[1]: 
-        print(f"Task '{task_name}' does not exist")
     for i in range(len(tasks_stat)):
         if tasks_stat[i][1] == task_name:
             tasks_stat[i] = (tasks_stat[i][0], tasks_stat[i][1], True)
@@ -128,7 +126,7 @@ def main():
                 case 6: print(show_completed_tasks() if file_path != None else "Enter the file path first")
                 case 7: break
                 case _:
-                    print("Invalid choice. Enter the number from 1 to 6")
+                    print("Invalid choice. Enter the number from 1 to 7")
         except ValueError:
             print("The command should be a number")
         except Exception:
